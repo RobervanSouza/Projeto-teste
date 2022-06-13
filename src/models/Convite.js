@@ -35,4 +35,9 @@ const convite = connection.define(
   }
 );
 
+const initTable = async () => {
+  await convite.sync();
+}
+initTable();
+
 module.exports = convite;
