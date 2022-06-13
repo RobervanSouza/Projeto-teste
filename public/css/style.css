@@ -346,12 +346,13 @@ span#close {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
+    color: black;
 
 }
 .form-modal{
     display: flex;
     flex-wrap: wrap;
-
+color: #000;
 }
 .form-modal input{
     width: 90%;
