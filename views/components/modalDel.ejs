@@ -1,0 +1,22 @@
+<section class="modal-overlay" id="overlay">
+    <div class="modal" id="modal">
+        
+        <div class="modal-header">
+         <h3> Remover Convite </h3>
+         <a href="/" id="fecha-modal" ><i class="bi bi-x-octagon-fill"></i></a>
+        </div>
+    
+        <div class="modal-body">
+            
+           <p>Tem certeza que deseja excluir <%= conviteDel.nome %> </p>
+           <div id="deletar">
+               <a id="nao" href="/">Não</a>
+               <a id="sim" href="/deletar/<%= conviteDel.id %>">Sim</a>
+
+           </div>
+        </div>
+    
+    
+    
+    </div>
+    </section>

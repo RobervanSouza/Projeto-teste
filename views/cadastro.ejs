@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <%- include('./components/head') %>
+  </head>
+  <body class="teste">
+   
+    
+    <%- include('./components/nav') %>
+
+    
+    <section id="cadastro">
+  
+      <img class="imagem" src="/img/00fccdaf0f2f01a01a2c4c2536620d87.jpg" alt="">
+      <div>
+        <h2>Cadastre um novo convite</h2>
+
+        <form action="/create" method="POST">
+          
+
+          <label for="nome"> Nome:</label
+          ><!--    -->
+          <input type="text" id="nome" name="nome" required placeholder="nome do convite"/>
+
+          <label for="descricao"> Descrição:</label>
+          <input type="text" id="descricao" name="descricao" required placeholder="descricao"/><!--    -->
+
+          <label for="tipo"> Tipo:</label><!--    -->
+           <input type="text" id="tipo" name="tipo" required placeholder="tipo do convite" />
+
+          <label for="imagem"> Link da Imagem:</label
+          ><!--    -->
+          <input type="text" id="imagem" name="imagem"required placeholder="endereço da imagem"/>
+
+          <button id="btnCadastrar" type="submit">Cadastrar</button
+          ><!--    -->
+        </form>
+      </div>
+    </section>
+
+    <%- include('./components/footer') %>
+
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "projeto-teste",
+  "version": "1.0.0",
+  "description": "projeto teste",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobervanSouza/Projeto-teste.git"
+  },
+  "author": "robervan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobervanSouza/Projeto-teste/issues"
+  },
+  "homepage": "https://github.com/RobervanSouza/Projeto-teste#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.20.1"
+  }
+}

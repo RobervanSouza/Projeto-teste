@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <%- include('./components/head') %>
+</head>
+<body class="nav">
+    <%- include('./components/nav') %>
+    
+       <header>
+        <img  src="/img/perola logo.jpg" alt="">
+      <%  if(mensagem != "") { %>
+        <%- include('./components/alerta') %>
+        <% } %> 
+       
+       </header>
+
+
+     <main>
+       
+        <section id="lista">
+                
+
+            <% convites.forEach((convite) => { %> 
+
+               <div class="card">
+
+                <div class="botao">
+                    <div class="botao-vertical">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+                    <div class="botao-editar2">
+
+                   <a id="deletar" class="teste" href="/getById/<%= convite.id %>/deletar"> Deletar</a>
+                   <a id="editar2" href="/getById/<%= convite.id %>/Put">Editar</a>
+
+                    </div>
+
+                </div>
+                
+
+                <p><h3> <%= convite.nome %> </h3> </p>
+                 <a><img src="<%= convite.imagem%>" alt=""> </a> 
+                 <p class="descricao"> <%= convite.descricao %> </p>
+             
+ 
+
+               
+
+               
+
+              
+               </div>
+       
+              <%})  %> 
+        
+     </main>
+
+     <% if(convitePut != null) {%>
+              <%- include('./components/modalPut') %>
+     <% } %>
+
+
+    <% if(conviteDel != null) {%>
+        <%- include('./components/modalDel') %>
+    <% } %>
+
+
+
+     <%- include('./components/footer') %>
+ 
+
+     
+     
+     <script src="js/script.js"></script>
+</body>
+</html>
