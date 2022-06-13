@@ -11,7 +11,7 @@
                 rejectUnauthorized: false,
             },
          },
-     }
+     },
  );
 
  module.exports = connection;
