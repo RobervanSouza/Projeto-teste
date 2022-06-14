@@ -71,7 +71,7 @@ Este projeto está sob a licença (Mozilla Public License 2.0) - veja o arquivo 
 
 ## Gratidão
 
-Obrigado aos professores da BLue pela ajuda.
+Obrigado aos professores da Blue pela ajuda.
 
 
 
