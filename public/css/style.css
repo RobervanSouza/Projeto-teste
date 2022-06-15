@@ -588,6 +588,9 @@ section#alerta{
   
   
 }
+#detalhes p{
+    color: red;
+}
 a.detalhesimagem img{
  
     width: 100%;
