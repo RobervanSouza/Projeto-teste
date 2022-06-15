@@ -21,6 +21,9 @@ routes.get("/deletar/:id", ConviteContollers.deletar);
 
 routes.post("/pesquisa", ConviteContollers.pequisaByName);
 
+// detalhes
+
+routes.get("/detalhes/:id", ConviteContollers.detalhes);
 
 
 

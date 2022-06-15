@@ -4,6 +4,12 @@
     <%- include('./components/head') %>
 </head>
 <body class="nav">
+
+    <div class="contente">
+        <div >
+
+        </div>
+    </div>
     <%- include('./components/nav') %>
     
        <header>
@@ -16,9 +22,44 @@
 
 
      <main>
-       
-        <section id="lista">
+        <% if(pesquisaconvite != false ) {%>
+            <section id="lista">
+              
+
+            <% pesquisaconvite.forEach((convite) => { %> 
+
+               <div class="card">
+
+                <div class="botao">
+                    <div class="botao-vertical">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+                    <div class="botao-editar2">
+
+                   <a id="deletar" class="teste" href="/getById/<%= convite.id %>/deletar"> Deletar</a>
+                   <a id="editar2" href="/getById/<%= convite.id %>/Put">Editar</a>
+
+                 </div>
+
+                </div>
+
+              
+                <p><h3> <%= convite.nome %> </h3> </p>
+                 <a><img src="<%= convite.imagem%>" alt=""> </a> 
+                 <p class="descricao"> <%= convite.descricao %> </p>
                 
+               </div>
+       
+            <%})  %> 
+             </section>
+
+         <% } else { %>
+
+        <section >
+              
+            </section>
+             <section id="lista">
+             
 
             <% convites.forEach((convite) => { %> 
 
@@ -33,26 +74,22 @@
                    <a id="deletar" class="teste" href="/getById/<%= convite.id %>/deletar"> Deletar</a>
                    <a id="editar2" href="/getById/<%= convite.id %>/Put">Editar</a>
 
-                    </div>
+                </div>
 
                 </div>
-                
-
-                <p><h3> <%= convite.nome %> </h3> </p>
-                 <a><img src="<%= convite.imagem%>" alt=""> </a> 
-                 <p class="descricao"> <%= convite.descricao %> </p>
-             
- 
-
-               
-
-               
-
               
-               </div>
+                 <p><h3> <%= convite.nome %> </h3> </p>
+                 <a href="/detalhes/<%= convite.id%>"><img src="<%= convite.imagem%>" alt=""> </a> 
+                 <p class="descricao"> <%= convite.descricao %> </p>
+               
+                </div>
+
+                
        
-              <%})  %> 
+            <%})  %> 
+
         </section>
+        <%} %> 
         
      </main>
 

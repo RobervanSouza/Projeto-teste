@@ -34,10 +34,12 @@ const convite = connection.define(
     updatedAt: false,
   }
 );
+
 const initTable = async () => {
   await convite.sync ();
 };
 
 initTable();
+
 
 module.exports = convite;

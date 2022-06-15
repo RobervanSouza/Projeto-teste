@@ -8,10 +8,7 @@ const Op = require("sequelize").Op;
 
 const getAll = async (req, res) => {
   try {
-    setTimeout(() => {
-      mensagem = "";
-      type = "";
-    }, 1000);
+    
 
     const convites = await convite.findAll(orderById);
     res.render("index", {
@@ -20,8 +17,12 @@ const getAll = async (req, res) => {
       conviteDel: null,
       mensagem,
       type,
-     
+      pesquisaconvite: false,
     });
+    setTimeout(() => {
+      mensagem = "";
+      type = "";
+    }, 1000);
   } catch (err) {
     res.status(500).send({ err: err.mensagem });
   }
@@ -71,7 +72,7 @@ const getById = async (req, res) => {
         conviteDel: null,
         mensagem,
         type,
-        
+        pesquisaconvite: false,
       });
     } else {
       res.render("index", {
@@ -80,7 +81,7 @@ const getById = async (req, res) => {
         conviteDel: conviteresposta,
         mensagem,
         type,
-      
+        pesquisaconvite: false,
       });
     }
   } catch (err) {
@@ -110,8 +111,8 @@ const deletar = async (req, res) => {
 };
 
 const pequisaByName = async (req, res) => {
-  try {
-    const teste = await convite.findAll({
+ // try {
+    const convitepesquisa = await convite.findAll({
       where: {
         nome: {
           [Op.like]: `%${req.body.convite}%`,
@@ -119,18 +120,42 @@ const pequisaByName = async (req, res) => {
       },
     });
    
-    if (teste.length == 0){
+    if (convitepesquisa.length == 0){
       mensagem = "Não encontramos o Convite"
       type = "info"
       return res.redirect("/")
     }
+    
+
+    res.render("index", {
+      convites: [],
+     convitePut: null,
+     conviteDel: null,
+      mensagem,
+      type,
+      pesquisaconvite: convitepesquisa,
+     
+    });
   // ate aqui ok
  
-  console.log(teste)
+  /*
   } catch (err) {
     res.status(500).send({ err: err.mensagem });
   }
+  */
 };
+
+
+// detalhes
+const detalhes = async (req ,res) => {
+  const id = req.params.id
+  const conviteresposta = await convite.findByPk(id);
+
+  res.render("detalhes", {conviteresposta})
+
+}
+
+
 
 module.exports = {
   getAll,
@@ -140,4 +165,5 @@ module.exports = {
   update,
   deletar,
   pequisaByName,
+  detalhes
 };
