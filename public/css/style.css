@@ -573,7 +573,7 @@ section#alerta{
 }
 
 #detalhes{
-    height: 100%;
+    height: 50%;
     box-shadow: inset 0 0 1em gold, 0 0 1em red; /* borda ao redor da imagem*/
     padding: 0.5rem;  /* para distanciar o testo da imagem*/
     border-radius: 2rem;
@@ -582,6 +582,9 @@ section#alerta{
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
+    margin-top: 22rem;
+    width: 50%;
+    margin-left: 2rem;
     
 }
  h3.detalhesnome{
@@ -592,6 +595,8 @@ section#alerta{
 }
 #detalhes p{
     color: red;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 a.detalhesimagem img{
  
