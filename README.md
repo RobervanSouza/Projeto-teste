@@ -34,14 +34,14 @@ npm i dotenv
 
 Esses comando tem que esta na pasta correta, verifique antes. Exemplo:
 
-alice@DESKTOP-U0QB6O3 MINGW64 ~/Desktop/CURSO BLUE/MODULO2/Projeto3/Modulo2-Projeto3 (main)
+alice@DESKTOP-U0QB6O3 MINGW64 ~/Desktop/CURSO BLUE/MODULO2/Projeto04/Projeto04-Modulo02(main)
 $ npm init
 
 /////////
 
 para dar start no projeto, digite npm run dev no mesmo terminal. Exemplo:
 
-alice@DESKTOP-U0QB6O3 MINGW64 ~/Desktop/CURSO BLUE/MODULO2/Projeto3/Modulo2-Projeto3 (main)
+alice@DESKTOP-U0QB6O3 MINGW64 ~/Desktop/CURSO BLUE/MODULO2/Projeto04/Projeto04-Modulo02 (main)
 $ npm run dev
 
 /////////
@@ -67,11 +67,11 @@ Tecnologias: Express, Nodemon, HTML e CSS
 
 ## licença 
 
-Este projeto está sob a licença (Mozilla Public License 2.0) - veja o arquivo LICENSE.md ([https://github.com/RobervanSouza/Modulo2-Projeto3/blob/main/LICENSE]) para detalhes.
+Este projeto está sob a licença (Mozilla Public License 2.0) - veja o arquivo LICENSE.md ([https://github.com/RobervanSouza/Projeto04-Modulo02/blob/main/LICENSE]) para detalhes.
 
 ## Gratidão
 
-Obrigado aos professores da BLue pela ajuda.
+Obrigado aos professores da Blue pela ajuda.
 
 
 
